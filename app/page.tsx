@@ -93,8 +93,11 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="bg-[#1a365d] text-white py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4 text-center md:text-left">
+      <section className="relative bg-[#1a365d] text-white py-16 md:py-24 overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-[0.12]">
+          <img src="/images/plumber.jpg" alt="Desentupidora Curitiba - Técnico profissional em ação" className="w-full h-full object-cover" />
+        </div>
+        <div className="relative z-10 max-w-6xl mx-auto px-4 text-center md:text-left">
           <div className="inline-block bg-[#dc2626] text-white px-3 py-1 mb-6 rounded text-sm font-bold uppercase tracking-wider">
             ATENDIMENTO 24H EM CURITIBA
           </div>
@@ -165,13 +168,8 @@ export default function Home() {
               <li className="flex items-start gap-2"><span className="text-[#25D366] font-bold">✓</span> Profissionais treinados: Técnicos conhecem cada bairro</li>
             </ul>
           </div>
-          <div className="bg-[#1a365d] rounded-xl flex items-center justify-center p-12 text-white text-center">
-            <div>
-              <svg className="w-16 h-16 mx-auto mb-4 opacity-80" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
-              </svg>
-              <p className="text-lg font-bold">Profissionais Especializados<br/>em Curitiba e Região</p>
-            </div>
+          <div className="rounded-xl overflow-hidden flex items-center justify-center">
+            <img src="/images/van.jpg" alt="Van de desentupidora Curitiba com equipamentos profissionais" className="w-full h-64 md:h-80 object-cover" />
           </div>
         </div>
       </section>
