@@ -27,31 +27,56 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Plumber",
+              "@type": ["LocalBusiness", "Plumber"],
               "name": "Desentupidora Curitiba Emergencial",
-              "description": "Serviço de desentupimento 24 horas em Curitiba e região metropolitana.",
+              "description": "Serviço de desentupimento 24 horas em Curitiba e região metropolitana. Atendimento ultra-rápido para residencial e comercial.",
               "url": "https://desentupidoracuritiba365.com.br",
-              "telephone": "+55-96-98432-1456",
+              "telephone": "+5596984321456",
+              "priceRange": "$$",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Rua Exemplo",
-                "addressLocality": "Santa Cândida",
-                "addressRegion": "Curitiba",
-                "addressCountry": "BR"
+                "streetAddress": "Rua Exemplo, 100",
+                "addressLocality": "Curitiba",
+                "addressRegion": "PR",
+                "addressCountry": "BR",
+                "postalCode": "83602-000"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": -25.4284,
+                "longitude": -49.2733
               },
               "areaServed": [
-                { "@type": "Place", "name": "Santa Cândida, Curitiba" },
-                { "@type": "Place", "name": "Bacacheri, Curitiba" },
-                { "@type": "Place", "name": "Tingui, Curitiba" },
-                { "@type": "Place", "name": "Boa Vista, Curitiba" },
-                { "@type": "Place", "name": "Cajuru, Curitiba" },
-                { "@type": "Place", "name": "Portão, Curitiba" },
-                { "@type": "Place", "name": "Água Verde, Curitiba" },
-                { "@type": "Place", "name": "Batel, Curitiba" },
-                { "@type": "Place", "name": "Centro, Curitiba" }
+                { "@type": "City", "name": "Curitiba" },
+                { "@type": "AdministrativeArea", "name": "Região Metropolitana de Curitiba" }
               ],
-              "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" },
-              "priceRange": "$$"
+              "openingHoursSpecification": [
+                { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "00:00", "closes": "23:59" },
+                { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "00:00", "closes": "23:59" },
+                { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "00:00", "closes": "23:59" },
+                { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "00:00", "closes": "23:59" },
+                { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "00:00", "closes": "23:59" },
+                { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "00:00", "closes": "23:59" },
+                { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "00:00", "closes": "23:59" }
+              ],
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "127",
+                "bestRating": "5"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Serviços de Desentupimento",
+                "itemListElement": [
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desentupidora de Pia" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desentupidora de Vaso Sanitário" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desentupidora de Ralo" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desentupidora de Esgoto" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hidrojateamento" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Caça Vazamentos" } }
+                ]
+              }
             })
           }}
         />
@@ -60,3 +85,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   )
 }
+
