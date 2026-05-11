@@ -192,6 +192,7 @@ export default function Home() {
                 {n.name}<br/><span className="text-sm font-normal opacity-70">{n.time}</span>
               </div>
             ))}
+            <div className="p-4 border border-[#1a365d] bg-[#d6e3ff] rounded text-center font-bold text-[#1a365d]">Ver todos...</div>
           </div>
         </div>
       </section>

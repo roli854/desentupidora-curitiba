@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://desentupidora-curitiba.pages.dev'),
+  metadataBase: new URL('https://desentupidoracuritiba365.com.br'),
   title: 'Desentupidora 24h Curitiba - Orçamento Grátis | Santa Cândida, Bacacheri, Tingui',
   description: 'Desentupidora 24h em Curitiba. Chegamos em 30 min! Desentupimento de pia, vaso, ralo e esgoto. Atendimento em Santa Cândida, Bacacheri, Tingui e toda Curitiba. Solicite orçamento grátis agora!',
   keywords: 'desentupidora curitiba, desentupidora 24h, desentupidora santa candida, desentupimento curitiba',
@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@type": "Plumber",
               "name": "Desentupidora Curitiba Emergencial",
               "description": "Serviço de desentupimento 24 horas em Curitiba e região metropolitana.",
-              "url": "https://desentupidora-curitiba.pages.dev",
+              "url": "https://desentupidoracuritiba365.com.br",
               "telephone": "+55-96-98432-1456",
               "address": {
                 "@type": "PostalAddress",
