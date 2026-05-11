@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /
 
-Sitemap: https://desatupidora-curitiba365.com.br/sitemap.xml
+Sitemap: https://desentupidoracuritiba.com.br/sitemap.xml
