@@ -31,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "name": "Desentupidora Curitiba Emergencial",
               "description": "Serviço de desentupimento 24 horas em Curitiba e região metropolitana.",
               "url": "https://desentupidora-curitiba.pages.dev",
-              "telephone": "+55-41-99999-9999",
+              "telephone": "+55-96-98432-1456",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Rua Exemplo",
