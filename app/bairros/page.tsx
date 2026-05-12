@@ -1,151 +1,66 @@
 import type { Metadata } from 'next'
-import WhatsAppButton from '../components/WhatsAppButton'
 
-export const metadata: Metadata = {
-  title: 'Desentupidora em Santa Cândida, Bacacheri, Tingui - 24h Curitiba',
-  description: 'Desentupidora nos bairros de Curitiba! Atendemos Santa Cândida, Bacacheri, Tingui, Boa Vista e muito mais. Chegamos em 30 min. Orçamento grátis!',
-}
+export const metadata: Metadata = { title: 'Desentupidora em Todos os Bairros de Curitiba', description: 'Atendemos todos os bairros de Curitiba! Santa Cândida, Bacacheri, Tingui e muito mais. Chegamos em 30 min.' }
 
-const WA_LINK = 'https://wa.me/5541999999999?text=Ola%2C%20preciso%20de%20desentupidora'
-const TEL = 'tel:+5541999999999'
+const PHONE = '+5596984321456'
+const WA_LINK = `https://wa.me/${PHONE}?text=Ola%2C%20preciso%20de%20desentupidora`
+
+const trustBadges = [
+  { icon: 'verified', label: '90 DIAS DE GARANTIA' },
+  { icon: 'credit_card', label: 'PARCELAMOS NO CARTAO' },
+  { icon: 'schedule', label: 'CHEGADA EM 30 MIN' },
+  { icon: 'workspace_premium', label: 'ORCAMENTO GRAITO' },
+]
 
 const neighborhoods = [
-  { name: 'Santa Cândida', time: '~20 min', services: 'Todos os serviços' },
-  { name: 'Bacacheri', time: '~25 min', services: 'Todos os serviços' },
-  { name: 'Tingui', time: '~25 min', services: 'Todos os serviços' },
-  { name: 'Boa Vista', time: '~30 min', services: 'Todos os serviços' },
-  { name: 'Cajuru', time: '~30 min', services: 'Todos os serviços' },
-  { name: 'Portão', time: '~35 min', services: 'Todos os serviços' },
-  { name: 'Água Verde', time: '~35 min', services: 'Todos os serviços' },
-  { name: 'Batel', time: '~40 min', services: 'Todos os serviços' },
-  { name: 'Centro', time: '~40 min', services: 'Todos os serviços' },
+  { name: 'Santa Cândida', time: '~20 min' },
+  { name: 'Bacacheri', time: '~25 min' },
+  { name: 'Tingui', time: '~25 min' },
+  { name: 'Boa Vista', time: '~30 min' },
+  { name: 'Cajuru', time: '~30 min' },
+  { name: 'Portão', time: '~35 min' },
+  { name: 'Água Verde', time: '~35 min' },
+  { name: 'Batel', time: '~40 min' },
+  { name: 'Centro', time: '~40 min' },
 ]
-
-const otherAreas = [
-  'Jardim Américas', 'Capão Raso', 'Alto Rua XV', 'Bigorrilho', 'Hugo Lange',
-  'Jardim Social', 'São Francisco', 'Prado Velho', 'Campo Comprido', 'Cidade Industrial',
-  'Xaxim', 'São Braz', 'Vila Izabel', 'Riviera', 'Solar', 'Parque São Jorge', 'Jardim do Lago',
-]
-
-const region = ['Pinhais', 'São José Pinhais', 'Araucária', 'Fazenda Rio Grande', 'Campina Grande Sul', 'Colombo', 'Piraquara']
 
 export default function Page() {
   return (
     <main className="min-h-screen bg-[#f8f9fb] text-[#191c1e]">
-      <header className="bg-white sticky top-0 z-50 border-b border-[#c4c6cf]">
-        <div className="max-w-6xl mx-auto px-4 h-16 flex justify-between items-center">
+      <header className="sticky top-0 z-50 bg-white border-b border-[#c4c6cf]">
+        <div className="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <svg className="w-8 h-8 text-[#1a365d]" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
-            </svg>
-            <span className="font-bold text-[#1a365d] text-lg md:text-xl">DESENTUPIDORA CURITIBA</span>
+            <svg className="w-8 h-8 text-[#002045]" viewBox="0 0 24 24" fill="currentColor"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+            <span className="text-xl font-extrabold text-[#002045]">DESENTUPIDORA CURITIBA</span>
           </div>
-          <a href={TEL} className="hidden md:flex items-center gap-2 bg-[#1a365d] text-white px-4 py-2 rounded text-sm font-bold uppercase tracking-wider">
-            LIGAR AGORA
-          </a>
+          <span className="hidden md:block text-sm font-bold text-[#002045] hover:bg-gray-100 px-4 py-2 rounded">URGÊNCIA 24H</span>
         </div>
       </header>
-
-      <section className="relative bg-[#1a365d] text-white py-16 md:py-20 overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-[0.12]">
-          <img src="/images/plumber.jpg" alt="Desentupidora Bairros Curitiba" className="w-full h-full object-cover" />
-        </div>
-        <div className="relative z-10 max-w-6xl mx-auto px-4">
-          <div className="inline-block bg-[#dc2626] text-white px-3 py-1 mb-4 rounded text-sm font-bold uppercase tracking-wider">
-            ATENDIMENTO 24H EM CURITIBA
-          </div>
-          <h1 className="text-2xl md:text-4xl font-extrabold mb-4">
-            Desentupidora no Seu Bairro de Curitiba - Chegamos em 30 Minutos!
-          </h1>
-          <p className="text-lg md:text-xl mb-8 opacity-90">
-            Atendimento rápido em todos os bairros de Curitiba! Somos especializados em desentupimento de pia, vaso, ralo e esgoto. Profissionais locais, preço justo. Orçamento Grátis!
-          </p>
-          <WhatsAppButton href={WA_LINK}>
-            Solicitar Orçamento via WhatsApp
-          </WhatsAppButton>
+      <section className="relative min-h-[500px] flex items-center justify-center py-10 md:py-20 overflow-hidden">
+        <div className="absolute inset-0 z-0"><img alt="Bairros" src="/images/plumber.jpg" className="w-full h-full object-cover" /><div className="absolute inset-0 bg-[#002045]/85"></div></div>
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 text-center md:text-left">
+          <div className="inline-block bg-[#730007] text-white px-3 py-1 mb-4 text-sm font-bold">ATENDIMENTO IMEDIATO EM TODOS OS BAIRROS</div>
+          <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-4">Desentupidora no Seu Bairro de Curitiba</h1>
+          <p className="text-lg text-white opacity-90 mb-8 max-w-[600px]">Atendimento em todos os bairros de Curitiba e região metropolitana. Técnicos locais, chegada em até 30 minutos.</p>
+          <a className="inline-flex items-center justify-center bg-[#006d2f] text-white px-8 h-16 text-lg font-bold rounded-lg" href={WA_LINK}>SOLICITAR ORÇAMENTO VIA WHATSAPP</a>
         </div>
       </section>
-
-      <section className="bg-white py-10 border-b border-[#c4c6cf]">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-6">
-            <div className="flex flex-col items-center text-center">
-              <svg className="w-10 h-10 text-[#25D366] mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-              <span className="text-sm font-bold">30 minutos</span>
+      <section className="bg-[#e7e8ea] py-6"><div className="max-w-6xl mx-auto px-6 flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale">{trustBadges.map((b) => <div key={b.label} className="flex items-center gap-2"><svg className="w-6 h-6 text-[#006d2f]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><span className="text-sm font-bold">{b.label}</span></div>)}</div></section>
+      <section className="py-10 md:py-20 max-w-6xl mx-auto px-6">
+        <h2 className="text-2xl font-bold text-[#002045] text-center mb-10">Bairros Atendidos</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {neighborhoods.map((n) => (
+            <div key={n.name} className="p-4 border border-[#c4c6cf] rounded-lg text-center hover:bg-white transition-colors">
+              <p className="font-bold text-[#002045]">{n.name}</p>
+              <p className="text-sm text-[#43474e]">{n.time}</p>
             </div>
-            <div className="flex flex-col items-center text-center">
-              <svg className="w-10 h-10 text-[#25D366] mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-              <span className="text-sm font-bold">24 Horas</span>
-            </div>
-            <div className="flex flex-col items-center text-center">
-              <svg className="w-10 h-10 text-[#25D366] mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg>
-              <span className="text-sm font-bold">PIX</span>
-            </div>
-            <div className="flex flex-col items-center text-center">
-              <svg className="w-10 h-10 text-[#25D366] mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-              <span className="text-sm font-bold">Orçamento Grátis</span>
-            </div>
-          </div>
+          ))}
         </div>
+        <p className="text-center text-[#43474e] mt-8">+ Região Metropolitana: Pinhais, São José Pinhais, Araucária, Colombo...</p>
       </section>
-
-      <section className="py-12 md:py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-xl md:text-2xl font-bold mb-8">Principais Bairros</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {neighborhoods.map((area) => (
-              <div key={area.name} className="p-4 border border-[#c4c6cf] rounded-lg text-center hover:bg-[#f8f9fb] transition-colors">
-                <p className="font-bold text-[#1a365d]">{area.name}</p>
-                <p className="text-sm text-[#43474e]">{area.time}</p>
-                <p className="text-xs text-[#25D366] mt-1">{area.services}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 md:py-16 bg-[#f8f9fb]">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-xl md:text-2xl font-bold mb-8">Outros Bairros</h2>
-          <div className="flex flex-wrap gap-2">
-            {otherAreas.map((area) => (
-              <span key={area} className="px-3 py-2 bg-white border border-[#c4c6cf] rounded text-sm text-[#43474e]">
-                {area}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 md:py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-xl md:text-2xl font-bold mb-8">Região Metropolitana</h2>
-          <div className="flex flex-wrap gap-2">
-            {region.map((area) => (
-              <span key={area} className="px-4 py-2 bg-[#1a365d] text-white rounded font-bold">
-                {area}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#1a365d] text-white py-16 text-center">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Atendimento no Seu Bairro!</h2>
-          <p className="text-lg mb-8 opacity-80">Técnicos especializados conhece cada região de Curitiba.</p>
-          <WhatsAppButton href={WA_LINK} className="px-12 py-5 rounded-full text-lg">
-            SOLICITAR ORÇAMENTO VIA WHATSAPP
-          </WhatsAppButton>
-        </div>
-      </section>
-
-      <footer className="bg-[#1a365d] border-t border-white/10">
-        <div className="flex flex-col items-center py-8 px-4 text-center gap-4 text-white">
-          <p className="font-bold text-lg">DESENTUPIDORA CURITIBA</p>
-          <p className="opacity-80">Atendimento 24h • (41) 99999-9999</p>
-        </div>
-      </footer>
+      <section className="py-10 md:py-20 bg-white border-t border-[#c4c6cf]"><div className="max-w-6xl mx-auto px-6 text-center"><h2 className="text-2xl font-bold text-[#002045] mb-6">Atendimento no seu bairro!</h2><div className="flex flex-col md:flex-row justify-center gap-4"><a className="bg-[#006d2f] text-white px-12 h-16 flex items-center justify-center text-lg font-bold rounded-lg" href={WA_LINK}>SOLICITAR ORÇAMENTO VIA WHATSAPP</a><a className="bg-[#002045] text-white px-12 h-16 flex items-center justify-center text-lg font-bold rounded-lg" href={`tel:${PHONE}`}>LIGAR AGORA</a></div></div></section>
+      <footer className="bg-[#002045] text-white pb-28 border-t border-[#c4c6cf]"><div className="flex flex-col items-center text-center px-6 py-10 max-w-6xl mx-auto"><div className="text-xl font-extrabold mb-4">DESENTUPIDORA CURITIBA</div><div className="flex flex-wrap justify-center gap-6 mb-8"><a className="text-sm font-bold text-white/80" href="/">Início</a><a className="text-sm font-bold text-white/80" href="/servicos/desentupidora-pia">Serviços</a><a className="text-sm font-bold text-white/80" href="/bairros">Bairros</a><a className="text-sm font-bold text-white/80" href="/contato">Contato</a></div><p className="text-sm opacity-70">© 2026 Desentupidora Curitiba 24h</p></div></footer>
+      <nav className="fixed bottom-0 left-0 right-0 z-50 h-[72px] bg-[#006d2f] border-t-4 border-[#5dfd8a] flex w-full"><a className="flex-1 items-center justify-center bg-[#006d2f] text-white h-full" href={WA_LINK}><span className="text-lg font-bold">CHAMAR WHATSAPP</span></a><a className="flex-1 items-center justify-center text-white h-full opacity-90" href={`tel:${PHONE}`}><span className="text-lg font-bold">LIGAR AGORA</span></a></nav>
     </main>
   )
 }
