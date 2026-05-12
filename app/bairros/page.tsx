@@ -9,7 +9,7 @@ const trustBadges = [
   { icon: 'verified', label: '90 DIAS DE GARANTIA' },
   { icon: 'credit_card', label: 'PARCELAMOS NO CARTAO' },
   { icon: 'schedule', label: 'CHEGADA EM 30 MIN' },
-  { icon: 'workspace_premium', label: 'ORCAMENTO GRAITO' },
+  { icon: 'workspace_premium', label: 'ORÇAMENTO GRÁTIS' },
 ]
 
 const neighborhoods = [

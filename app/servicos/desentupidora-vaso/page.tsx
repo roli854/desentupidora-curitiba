@@ -13,7 +13,7 @@ const trustBadges = [
   { icon: 'verified', label: '90 DIAS DE GARANTIA' },
   { icon: 'credit_card', label: 'PARCELAMOS NO CARTAO' },
   { icon: 'schedule', label: 'CHEGADA EM 30 MIN' },
-  { icon: 'workspace_premium', label: 'ORCAMENTO GRAITO' },
+  { icon: 'workspace_premium', label: 'ORÇAMENTO GRÁTIS' },
 ]
 
 const whyVaso = [
@@ -96,7 +96,7 @@ export default function Page() {
             <svg className="w-12 h-12 text-[#66ff8e] mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
             <h3 className="text-xl font-bold mb-2">Plantão Curitiba</h3>
             <p className="opacity-80 text-sm mb-6">Atendemos todos os bairros de Curitiba e Região Metropolitana agora mesmo.</p>
-            <div className="text-xl font-bold border-t border-white/20 pt-4 w-full">(41) 9999-9999</div>
+            <div className="text-xl font-bold border-t border-white/20 pt-4 w-full">+5596984321456</div>
           </div>
         </div>
       </section>

@@ -13,7 +13,7 @@ const trustBadges = [
   { icon: 'verified', label: '90 DIAS DE GARANTIA' },
   { icon: 'credit_card', label: 'PARCELAMOS NO CARTAO' },
   { icon: 'schedule', label: 'CHEGADA EM 30 MIN' },
-  { icon: 'workspace_premium', label: 'ORCAMENTO GRAITO' },
+  { icon: 'workspace_premium', label: 'ORÇAMENTO GRÁTIS' },
 ]
 
 const whyPia = [
@@ -116,7 +116,7 @@ export default function Page() {
             <h3 className="text-xl font-bold mb-2">Plantão Curitiba</h3>
             <p className="opacity-80 text-sm mb-6">Atendemos todos os bairros de Curitiba e Região Metropolitana agora mesmo.</p>
             <div className="text-xl font-bold border-t border-white/20 pt-4 w-full">
-              (41) 9999-9999
+              +5596984321456
             </div>
           </div>
         </div>
