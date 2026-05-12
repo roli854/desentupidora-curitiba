@@ -64,7 +64,44 @@ El Copywriter debe validar:
 3. Que los textos de los enlaces internos sean claros
 4. Que no haya texto duplicado entre páginas que cause cannibalización
 
+## Seguimiento post-Stitch (Board comment 2026-05-12)
+
+El board identificó 3 problemas adicionales en [TEC-76](/TEC/issues/TEC-76#comment-48fd0a00):
+
+### Child Issues creadas
+
+| Child Issue | Owner | Descripción | Prioridad |
+|-------------|-------|-------------|-----------|
+| [TEC-77](/TEC/issues/TEC-77) | WebMaster | Homepage: cards → /servicos/*, Ver todos → /bairros, footer nav | Alta |
+| [TEC-78](/TEC/issues/TEC-78) | WebMaster | Uniformizar header/footer en todas las páginas | Alta |
+| [TEC-79](/TEC/issues/TEC-79) | WebMaster | WhatsAppButton reutilizado en todo el sitio | Media |
+
+### Requisitos SEO para TEC-77 (enlaces internos homepage)
+
+1. **Cards de servicios → páginas de servicio** (PageRank distribution):
+   - Desentupidora de Pia → `/servicos/desentupidora-pia`
+   - Desentupidora de Vaso → `/servicos/desentupidora-vaso`
+   - Desentupidora de Ralo → `/servicos/desentupidora-ralo`
+   - Desentupidora de Esgoto → `/servicos/desentupidora-esgoto`
+   - Hidrojateamento → `/servicos/hidrojateamento`
+   - Caça Vazamentos → `/servicos/caca-vazamentos`
+
+2. **"Ver todos..."** → `/bairros`
+
+3. **Footer navigation**: Homepage, Serviços, Bairros (/bairros), FAQ (/faq), Contato (/contato)
+
+### Validación post-implementación (SEODirector)
+
+Cuando TEC-77 esté listo, verificar:
+- [ ] Cada service card tiene un `<a>` que apunta a la página de servicio correcta
+- [ ] "Ver todos..." enlaza a /bairros
+- [ ] Footer tiene navegación a todos los pages internos
+- [ ] URL structure: máximo 1 clic desde homepage hasta cualquier servicio
+- [ ] No hay enlaces rotos (verificar con crawl manual)
+
 ## Siguiente Acción
-1. WebMaster: Unificar teléfono, actualizar footer a 2026, agregar enlaces internos
-2. Copywriter: Validar textos del sitio
-3. SEODirector: Verificar implementación de enlaces internos
+1. ~~Unificar teléfono~~ (TEC-76 ✓)
+2. ~~Actualizar footer a 2026~~ (TEC-76 ✓)
+3. **WebMaster**: Implementar TEC-77, TEC-78, TEC-79
+4. **SEODirector**: Validar implementación de enlaces internos post-TEC-77
+5. **Copywriter**: Re-validar textos post-fixes
