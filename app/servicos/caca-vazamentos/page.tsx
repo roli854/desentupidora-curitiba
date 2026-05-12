@@ -1,137 +1,136 @@
-'use client'
-
+import type { Metadata } from 'next'
 import WhatsAppButton from '../../components/WhatsAppButton'
 
-export default function CacaVazamentos() {
-  const phone = "554196984321456"
-  const whatsappLink = `https://wa.me/${phone}`
+export const metadata: Metadata = {
+  title: 'Caça Vazamentos Curitiba - Detecção sem Quebrar | Orçamento Grátis',
+  description: 'Vazamento oculto em Curitiba? Nós localizamos sem quebrar paredes! Tecnologia moderna para detecção de vazamentos. Orçamento grátis.',
+}
 
+const WA_LINK = 'https://wa.me/5541999999999?text=Ola%2C%20preciso%20localizar%20um%20vazamento'
+const TEL = 'tel:+5541999999999'
+
+const signs = [
+  'Conta de água inesperadamente alta',
+  'Manchas de umidade nas paredes',
+  'Mofo e bolor',
+  'Chodoro úmido persistente',
+  'Barulho de água correndo',
+  'Infiltração no piso',
+]
+
+const technologies = [
+  { title: 'Geofone', desc: 'Detecção por звук' },
+  { title: 'Termografia', desc: 'Câmera térmica para variações de temperatura' },
+  { title: 'Teste de Pressão', desc: 'Verificação de estanqueidade da rede' },
+  { title: 'Inspeção Visual', desc: 'Análise detalhada de pontos críticos' },
+]
+
+export default function Page() {
   return (
-    <main className="min-h-screen bg-white">
-      <section className="py-12 px-4 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-            Caça Vazamentos em Curitiba
+    <main className="min-h-screen bg-[#f8f9fb] text-[#191c1e]">
+      <header className="bg-white sticky top-0 z-50 border-b border-[#c4c6cf]">
+        <div className="max-w-6xl mx-auto px-4 h-16 flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <svg className="w-8 h-8 text-[#1a365d]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+            </svg>
+            <span className="font-bold text-[#1a365d] text-lg md:text-xl">DESENTUPIDORA CURITIBA</span>
+          </div>
+          <a href={TEL} className="hidden md:flex items-center gap-2 bg-[#1a365d] text-white px-4 py-2 rounded text-sm font-bold uppercase tracking-wider">
+            LIGAR AGORA
+          </a>
+        </div>
+      </header>
+
+      <section className="relative bg-[#1a365d] text-white py-16 md:py-20 overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-[0.12]">
+          <img src="/images/plumber.jpg" alt="Caça Vazamentos Curitiba" className="w-full h-full object-cover" />
+        </div>
+        <div className="relative z-10 max-w-6xl mx-auto px-4">
+          <div className="inline-block bg-[#dc2626] text-white px-3 py-1 mb-4 rounded text-sm font-bold uppercase tracking-wider">
+            ATENDIMENTO 24H EM CURITIBA
+          </div>
+          <h1 className="text-2xl md:text-4xl font-extrabold mb-4">
+            Vazamento Oculto em Curitiba? Nós Localizamos sem Quebrar!
           </h1>
-          <p className="text-lg text-gray-600 mb-8">
-            Vazamento Escondido? Encontramos e Resolvemos em Curitiba!
+          <p className="text-lg md:text-xl mb-8 opacity-90">
+            Serviço de caça vazamentos em Curitiba com tecnologia de ponta. Detectamos vazamentos em tubulações ocultas sem destruir paredes ou piso. Atendimento 24 horas e Orçamento Grátis!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <WhatsAppButton href={whatsappLink}>
-              Solicitar Orçamento via WhatsApp
-            </WhatsAppButton>
-            <a href="tel:4196984321456" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-base font-bold bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
-              (41) 96984-321456
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            <div className="text-center p-4">
-              <div className="text-2xl font-bold text-green-600">24h</div>
-              <div className="text-gray-600">Atendimento</div>
-            </div>
-            <div className="text-center p-4">
-              <div className="text-2xl font-bold text-green-600">30min</div>
-              <div className="text-gray-600">Chegamos</div>
-            </div>
-            <div className="text-center p-4">
-              <div className="text-2xl font-bold text-green-600">500+</div>
-              <div className="text-gray-600">Clientes</div>
-            </div>
-            <div className="text-center p-4">
-              <div className="text-2xl font-bold text-green-600">PIX</div>
-              <div className="text-gray-600">Aceitamos</div>
-            </div>
-            <div className="text-center p-4">
-              <div className="text-2xl font-bold text-green-600">Garantia</div>
-              <div className="text-gray-600">Total</div>
-            </div>
-            <div className="text-center p-4">
-              <div className="text-2xl font-bold text-green-600">certificado</div>
-              <div className="text-gray-600">Técnicos</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Serviços de Caça Vazamentos em Curitiba
-          </h2>
-          <div className="space-y-4">
-            <div className="bg-white p-4 rounded-lg shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">Detecção de Vazamentos Ocultos</h3>
-              <p className="text-gray-600">Localizamos vazamentos em paredes, pisos e tetos sem quebrar. Tecnologia moderna para identificar o problema exato.</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">Vazamentos de Rede Hidráulica</h3>
-              <p className="text-gray-600">Identificamos vazamentos em tubulações de água fria, quente e pressurized.</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">Vazamentos de Esgoto</h3>
-              <p className="text-gray-600">Detectamos vazamentos no sistema de esgoto antes que causem danos maiores.</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">Reparo e Manutenção</h3>
-              <p className="text-gray-600">Após detectar, realizamos o reparo completo do vazamento identificado.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Por Que Escolher Nossa Caça Vazamentos em Curitiba?
-          </h2>
-          <ul className="space-y-4">
-            <li className="flex items-start gap-3">
-              <span className="text-green-600 text-xl">✓</span>
-              <span className="text-gray-700">Tecnologia avançada de detecção sem quebra-quebra</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-green-600 text-xl">✓</span>
-              <span className="text-gray-700">Atendimento 24 horas, 7 dias por semana</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-green-600 text-xl">✓</span>
-              <span className="text-gray-700">Chegamos em 30 minutos em Curitiba</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-green-600 text-xl">✓</span>
-              <span className="text-gray-700">Preço justo e transparente</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-green-600 text-xl">✓</span>
-              <span className="text-gray-700">Pagamento facilitado via PIX</span>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section className="py-12 px-4 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Não Deixe o Vazamento Piorar — Solicite Seu Orçamento Agora
-          </h2>
-          <p className="text-gray-600 mb-8">
-            Cada hora de vazamento não tratado pode causar mais danos à sua estrutura.
-          </p>
-          <WhatsAppButton href={whatsappLink} className="text-lg px-8 py-4">
+          <WhatsAppButton href={WA_LINK}>
             Solicitar Orçamento via WhatsApp
           </WhatsAppButton>
         </div>
       </section>
 
-      <footer className="py-8 px-4 bg-gray-900 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="mb-4">Atendemos todos os bairros de Curitiba e região</p>
-          <p className="text-sm text-gray-400">© 2024 Desentupidora Curitiba Emergencial</p>
+      <section className="bg-white py-10 border-b border-[#c4c6cf]">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-6">
+            <div className="flex flex-col items-center text-center">
+              <svg className="w-10 h-10 text-[#25D366] mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+              <span className="text-sm font-bold">30 minutos</span>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <svg className="w-10 h-10 text-[#25D366] mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span className="text-sm font-bold">24 Horas</span>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <svg className="w-10 h-10 text-[#25D366] mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg>
+              <span className="text-sm font-bold">PIX</span>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <svg className="w-10 h-10 text-[#25D366] mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span className="text-sm font-bold">Orçamento Grátis</span>
+            </div>
+            <div className="flex flex-col items-center text-center col-span-2">
+              <svg className="w-10 h-10 text-[#25D366] mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M21 5.5c-1.4 0-2.6.5-3.5 1.3l-7.1-5.5c-.3-.2-.7-.3-1.1-.1-.4.2-.6.6-.6 1.1v.5l2.5 2.1-6.7 8.5c-.5.6-.5 1.4-.2 2.1.4.7 1.1 1.1 1.9 1.1h11.8c.8 0 1.5-.5 1.9-1.1.3-.6.3-1.5-.2-2.1l-6.7-8.5.4.3V21h.5l1.6-1.2c.7-.6 1.1-1.4 1.1-2.3 0-1.8-1.5-3.3-3.3-3.3h-.2z"/></svg>
+              <span className="text-sm font-bold">Sem quebra-quebra</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-xl md:text-2xl font-bold mb-8">Sinais de Vazamento Oculto</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {signs.map((sign, i) => (
+              <div key={i} className="flex items-start gap-3 p-4 border border-[#c4c6cf] rounded">
+                <span className="text-[#25D366] font-bold text-xl">✓</span>
+                <span className="text-[#43474e]">{sign}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16 bg-[#f8f9fb]">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-xl md:text-2xl font-bold mb-8">Tecnologia que Utilizamos</h2>
+          <div className="grid md:grid-cols-4 gap-6">
+            {technologies.map((tech, i) => (
+              <div key={i} className="bg-white p-6 rounded-lg border border-[#c4c6cf] text-center">
+                <h3 className="font-bold text-lg mb-2">{tech.title}</h3>
+                <p className="text-[#43474e] text-sm">{tech.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#1a365d] text-white py-16 text-center">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Vazamento Oculto? Detectamos sem Destruir!</h2>
+          <p className="text-lg mb-8 opacity-80">Tecnologia moderna para localização precisa.</p>
+          <WhatsAppButton href={WA_LINK} className="px-12 py-5 rounded-full text-lg">
+            SOLICITAR ORÇAMENTO VIA WHATSAPP
+          </WhatsAppButton>
+        </div>
+      </section>
+
+      <footer className="bg-[#1a365d] border-t border-white/10">
+        <div className="flex flex-col items-center py-8 px-4 text-center gap-4 text-white">
+          <p className="font-bold text-lg">DESENTUPIDORA CURITIBA</p>
+          <p className="opacity-80">Atendimento 24h • (41) 99999-9999</p>
         </div>
       </footer>
     </main>
