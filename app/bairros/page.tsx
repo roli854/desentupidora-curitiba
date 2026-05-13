@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 
 export const metadata: Metadata = { title: 'Desentupidora em Todos os Bairros de Curitiba', description: 'Atendemos todos os bairros de Curitiba! Santa Cândida, Bacacheri, Tingui e muito mais. Chegamos em 30 min.' }
 
-const PHONE = '5541999999999'
+const PHONE = '5596984321456'
 const WA_LINK = `https://wa.me/${PHONE}?text=Ola%2C%20preciso%20de%20desentupidora`
 
 const trustBadges = [

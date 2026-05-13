@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 
 export const metadata: Metadata = { title: 'FAQ - Perguntas Frequentes | Desentupidora Curitiba', description: 'Tire suas dúvidas sobre serviços de desentupidora em Curitiba. Orçamento grátis, atendimento 24h.' }
 
-const PHONE = '5541999999999'
+const PHONE = '5596984321456'
 const WA_LINK = `https://wa.me/${PHONE}?text=Ola%2C%20tenho%20uma%20duvida`
 
 const trustBadges = [

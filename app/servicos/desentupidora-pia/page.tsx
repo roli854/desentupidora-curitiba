@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Desentupimento de pia de cozinha e banheiro em Curitiba. Remoção completa de gordura, restos de alimentos. Orçamento gratuito!',
 }
 
-const PHONE = '+5541999999999'
+const PHONE = '+5596984321456'
 const WA_LINK = `https://wa.me/${PHONE}?text=Ola%2C%20preciso%20desentupir%20uma%20pia`
 
 const trustBadges = [
@@ -119,7 +119,7 @@ export default function Page() {
             <h3 className="text-xl font-bold mb-2">Plantão Curitiba</h3>
             <p className="opacity-80 text-sm mb-6">Atendemos todos os bairros de Curitiba e Região Metropolitana agora mesmo.</p>
             <div className="text-xl font-bold border-t border-white/20 pt-4 w-full">
-              +5541999999999
+              +5596984321456
             </div>
           </div>
         </div>

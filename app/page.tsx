@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   },
 }
 
-const WA_LINK = 'https://wa.me/5541999999999?text=Ola%2C%20preciso%20de%20um%20or%C3%A7amento%20de%20desentupidora'
-const TEL = 'tel:+5541999999999'
+const WA_LINK = 'https://wa.me/5596984321456?text=Ola%2C%20preciso%20de%20um%20or%C3%A7amento%20de%20desentupidora'
+const TEL = 'tel:+5596984321456'
 
 const trustBadges = [
   { icon: 'schedule', label: '24 Horas' },
@@ -243,7 +243,7 @@ export default function Home() {
             <WhatsAppButton href={WA_LINK} className="px-12 py-5 rounded-full text-lg">
               FALAR COM ATENDENTE AGORA
             </WhatsAppButton>
-            <p className="opacity-70">WhatsApp: +55 41 99999-9999 | Rua Exemplo, Santa Cândida, Curitiba - PR | Atendimento 24h / 7 dias</p>
+            <p className="opacity-70">WhatsApp: +55 96 98432-1456 | Rua Exemplo, Santa Cândida, Curitiba - PR | Atendimento 24h / 7 dias</p>
           </div>
         </div>
       </section>
