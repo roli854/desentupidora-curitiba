@@ -56,11 +56,6 @@ export default function Page() {
       <section className="py-10 md:py-20 max-w-6xl mx-auto px-6"><div className="bg-white border border-[#c4c6cf] p-8"><h2 className="text-2xl font-bold text-[#1a365d] mb-4">O que é Hidrojateamento?</h2><p className="text-[#43474e] mb-6">Método de limpeza com água em alta pressão que remove gordura, calcificação, raízes e resíduos acumulados nas tubulações.</p></div></section>
       <section className="py-10 md:py-20 bg-white border-t border-[#c4c6cf]"><div className="max-w-6xl mx-auto px-6 text-center"><h2 className="text-2xl font-bold text-[#1a365d] mb-6">Precisa de Hidrojateamento?</h2><div className="flex flex-col md:flex-row justify-center gap-4"><WhatsAppButton href={WA_LINK} className="px-12 h-16 text-lg rounded-lg">SOLICITAR ORÇAMENTO VIA WHATSAPP</WhatsAppButton><a className="bg-[#1a365d] text-white px-12 h-16 flex items-center justify-center text-lg font-bold rounded-lg" href={`tel:${PHONE}`}>LIGAR AGORA</a></div></div></section>
       <Footer />
-      <div className="fixed bottom-6 right-4 z-40">
-        <WhatsAppButton href={WA_LINK}>
-          Solicitar Orçamento
-        </WhatsAppButton>
-      </div>
     </main>
   )
 }
