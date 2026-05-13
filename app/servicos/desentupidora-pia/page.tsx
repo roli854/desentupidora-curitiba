@@ -87,7 +87,7 @@ export default function Page() {
               <h3 className="font-bold text-gray-900 mb-2">Desentupimento de Pia de Cozinha</h3>
               <p className="text-gray-600">Removemos gordura, restos de comida e objetos que causam entupimento.</p>
             </div>
-          ))}
+          </div>
         </div>
       </section>
 
