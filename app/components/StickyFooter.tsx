@@ -1,7 +1,7 @@
 'use client'
 
 export default function StickyFooter() {
-  const whatsappLink = 'https://wa.me/554196984321456?text=Ola%2C%20preciso%20de%20um%20or%C3%A7amento%20de%20desentupidora'
+  const whatsappLink = 'https://wa.me/5541999999999?text=Ola%2C%20preciso%20de%20um%20or%C3%A7amento%20de%20desentupidora'
 
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50 md:hidden">

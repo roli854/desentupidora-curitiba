@@ -1,33 +1,35 @@
-'use client'
-
+import type { Metadata } from 'next'
 import WhatsAppButton from '../../components/WhatsAppButton'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 
-export default function Hidrojateamento() {
-  const phone = "554196984321456"
-  const whatsappLink = `https://wa.me/${phone}`
+export const metadata: Metadata = { title: 'Hidrojateamento em Curitiba | Limpeza de Tubulações', description: 'Hidrojateamento profissional em Curitiba. Limpeza de tubulações com jato de água de alta pressão. Orçamento gratuito!' }
 
+const PHONE = '+5596984321456'
+const WA_LINK = `https://wa.me/${PHONE}?text=Ola%2C%20preciso%20de%20hidrojateamento`
+
+const trustBadges = [
+  { icon: 'verified', label: '90 DIAS DE GARANTIA' },
+  { icon: 'credit_card', label: 'PARCELAMOS NO CARTAO' },
+  { icon: 'schedule', label: 'CHEGADA EM 30 MIN' },
+  { icon: 'workspace_premium', label: 'ORÇAMENTO GRÁTIS' },
+]
+
+export default function Page() {
   return (
-    <main className="min-h-screen bg-white">
-      <section className="py-12 px-4 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-            Hidrojateamento em Curitiba | Limpeza de Esgoto e Caixa de Gordura 24h
-          </h1>
-          <p className="text-lg text-gray-600 mb-8">
-            Esgoto Entupido ou Saturado? Hidrojateamento de Alta Pressão em Curitiba!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <WhatsAppButton href={whatsappLink}>
-              Solicitar Orçamento via WhatsApp
-            </WhatsAppButton>
-            <a href="tel:4196984321456" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-base font-bold bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
-              (41) 96984-321456
-            </a>
-          </div>
+    <main className="min-h-screen bg-[#f8f9fb] text-[#191c1e]">
+      <Header />
+      <section className="relative min-h-[500px] flex items-center justify-center py-10 md:py-20 overflow-hidden">
+        <div className="absolute inset-0 z-0"><img alt="Hidrojateamento" src="/images/plumber.jpg" className="w-full h-full object-cover" /><div className="absolute inset-0 bg-[#1a365d]/85"></div></div>
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 text-center md:text-left">
+          <div className="inline-block bg-[#730007] text-white px-3 py-1 mb-4 text-sm font-bold">ATENDIMENTO IMEDIATO EM TODOS OS BAIRROS</div>
+          <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-4">Hidrojateamento em Curitiba</h1>
+          <p className="text-lg text-white opacity-90 mb-8 max-w-[600px]">Limpeza de tubulações com jato de água de alta pressão. Remove calcificação, raízes e sujeira acumulada.</p>
+          <WhatsAppButton href={WA_LINK} className="px-8 h-16 text-lg rounded-lg">SOLICITAR ORÇAMENTO VIA WHATSAPP</WhatsAppButton>
         </div>
       </section>
 
-      <section className="py-12 px-4 bg-white">
+      <section className="py-10 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center p-4">
@@ -50,50 +52,15 @@ export default function Hidrojateamento() {
         </div>
       </section>
 
-      <section className="py-12 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Serviços de Hidrojateamento em Curitiba</h2>
-          <div className="space-y-4">
-            <div className="bg-white p-4 rounded-lg shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">Hidrojateamento de Esgoto</h3>
-              <p className="text-gray-600">Limpeza de tubulações de esgoto com jato de água de alta pressão. Remove calcificação, raízes e sujeira acumulada.</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">Limpeza de Caixa de Gordura</h3>
-              <p className="text-gray-600">Remoção de gordura acumulada em caixas de gordura residenciais e comerciais.</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">Hidrojateamento de Fossas</h3>
-              <p className="text-gray-600">Limpeza e esgotamento de fossas sépticas com equipamento especializado.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Por Que Escolher Nosso Hidrojateamento em Curitiba?</h2>
-          <ul className="space-y-4">
-            <li className="flex items-start gap-3"><span className="text-green-600 text-xl">✓</span><span className="text-gray-700">Equipamento de alta pressão profissional</span></li>
-            <li className="flex items-start gap-3"><span className="text-green-600 text-xl">✓</span><span className="text-gray-700">Atendimento 24 horas</span></li>
-            <li className="flex items-start gap-3"><span className="text-green-600 text-xl">✓</span><span className="text-gray-700">Técnicos especializados</span></li>
-          </ul>
-        </div>
-      </section>
-
-      <section className="py-12 px-4 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Problema de Esgoto? Solicite Hidrojateamento Agora</h2>
-          <WhatsAppButton href={whatsappLink} className="text-lg px-8 py-4">Solicitar Orçamento via WhatsApp</WhatsAppButton>
-        </div>
-      </section>
-
-      <footer className="py-8 px-4 bg-gray-900 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="mb-4">Atendemos todos os bairros de Curitiba e região</p>
-          <p className="text-sm text-gray-400">© 2024 Desentupidora Curitiba Emergencial</p>
-        </div>
-      </footer>
+      <section className="bg-[#e7e8ea] py-6"><div className="max-w-6xl mx-auto px-6 flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale">{trustBadges.map((b) => <div key={b.label} className="flex items-center gap-2"><svg className="w-6 h-6 text-[#006d2f]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><span className="text-sm font-bold">{b.label}</span></div>)}</div></section>
+      <section className="py-10 md:py-20 max-w-6xl mx-auto px-6"><div className="bg-white border border-[#c4c6cf] p-8"><h2 className="text-2xl font-bold text-[#1a365d] mb-4">O que é Hidrojateamento?</h2><p className="text-[#43474e] mb-6">Método de limpeza com água em alta pressão que remove gordura, calcificação, raízes e resíduos acumulados nas tubulações.</p></div></section>
+      <section className="py-10 md:py-20 bg-white border-t border-[#c4c6cf]"><div className="max-w-6xl mx-auto px-6 text-center"><h2 className="text-2xl font-bold text-[#1a365d] mb-6">Precisa de Hidrojateamento?</h2><div className="flex flex-col md:flex-row justify-center gap-4"><WhatsAppButton href={WA_LINK} className="px-12 h-16 text-lg rounded-lg">SOLICITAR ORÇAMENTO VIA WHATSAPP</WhatsAppButton><a className="bg-[#1a365d] text-white px-12 h-16 flex items-center justify-center text-lg font-bold rounded-lg" href={`tel:${PHONE}`}>LIGAR AGORA</a></div></div></section>
+      <Footer />
+      <div className="fixed bottom-6 right-4 z-40">
+        <WhatsAppButton href={WA_LINK}>
+          Solicitar Orçamento
+        </WhatsAppButton>
+      </div>
     </main>
   )
 }

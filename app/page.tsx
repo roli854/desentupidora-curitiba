@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   },
 }
 
-const WA_LINK = 'https://wa.me/5596984321456?text=Ola%2C%20preciso%20de%20um%20or%C3%A7amento%20de%20desentupidora'
-const TEL = 'tel:+5596984321456'
+const WA_LINK = 'https://wa.me/5541999999999?text=Ola%2C%20preciso%20de%20um%20or%C3%A7amento%20de%20desentupidora'
+const TEL = 'tel:+5541999999999'
 
 const trustBadges = [
   { icon: 'schedule', label: '24 Horas' },
@@ -26,12 +26,12 @@ const trustBadges = [
 ]
 
 const services = [
-  { icon: 'sink', title: 'Desentupidora de Pia', desc: 'Desentupimento rápido de pias de cozinha e banheiro. Removemos gordura, restos de comida e objetos com equipamento profissional.', link: '?text=Ola%2C%20preciso%20desentupir%20uma%20pia' },
-  { icon: 'toilet', title: 'Desentupidora de Vaso', desc: 'Desentupimento de vaso sanitário sem quebrar. Removemos objetos, papel higiênico excessivo e obstruções profundas.', link: '?text=Ola%2C%20preciso%20desentupir%20um%20vaso' },
-  { icon: 'shower', title: 'Desentupidora de Ralo', desc: 'Desentupimento de ralos de chão, box de banheiro e áreas de serviço. Solução imediata para evitar alagamentos.', link: '?text=Ola%2C%20preciso%20desentupir%20um%20ralo' },
-  { icon: 'water', title: 'Desentupidora de Esgoto', desc: 'Desentupimento completo de rede de esgoto residencial e comercial. Diagnóstico e solução para problemas graves.', link: '?text=Ola%2C%20preciso%20desentupir%20esgoto' },
-  { icon: 'water_drop', title: 'Hidrojateamento', desc: 'Limpeza de tubulações com jato de água de alta pressão. Remove calcificação, raízes e sujeira acumulada.', link: '?text=Ola%2C%20preciso%20de%20hidrojateamento' },
-  { icon: 'search', title: 'Caça Vazamentos', desc: 'Detecção de vazamentos em tubulações ocultas. Tecnologia moderna para localizar sem quebrar paredes.', link: '?text=Ola%2C%20preciso%20localizar%20um%20vazamento' },
+  { icon: 'sink', title: 'Desentupidora de Pia', desc: 'Desentupimento rápido de pias de cozinha e banheiro. Removemos gordura, restos de comida e objetos com equipamento profissional.', link: '/servicos/desentupidora-pia' },
+  { icon: 'toilet', title: 'Desentupidora de Vaso', desc: 'Desentupimento de vaso sanitário sem quebrar. Removemos objetos, papel higiênico excessivo e obstruções profundas.', link: '/servicos/desentupidora-vaso' },
+  { icon: 'shower', title: 'Desentupidora de Ralo', desc: 'Desentupimento de ralos de chão, box de banheiro e áreas de serviço. Solução imediata para evitar alagamentos.', link: '/servicos/desentupidora-ralo' },
+  { icon: 'water', title: 'Desentupidora de Esgoto', desc: 'Desentupimento completo de rede de esgoto residencial e comercial. Diagnóstico e solução para problemas graves.', link: '/servicos/desentupidora-esgoto' },
+  { icon: 'water_drop', title: 'Hidrojateamento', desc: 'Limpeza de tubulações com jato de água de alta pressão. Remove calcificação, raízes e sujeira acumulada.', link: '/servicos/hidrojateamento' },
+  { icon: 'search', title: 'Caça Vazamentos', desc: 'Detecção de vazamentos em tubulações ocultas. Tecnologia moderna para localizar sem quebrar paredes.', link: '/servicos/caca-vazamentos' },
 ]
 
 const neighborhoods = [
@@ -139,16 +139,14 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center md:text-left">Nossos Serviços Especializados</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {services.map((s) => (
-              <div key={s.title} className="bg-white p-6 border border-[#c4c6cf] rounded-lg flex flex-col h-full">
+              <a key={s.title} href={s.link} className="bg-white p-6 border border-[#c4c6cf] rounded-lg flex flex-col h-full hover:border-[#1a365d] hover:shadow-md transition-all">
                 <svg className="w-10 h-10 text-[#1a365d] mb-4" fill="currentColor" viewBox="0 0 24 24">
                   <path d={serviceIcons[s.icon] || serviceIcons.sink} />
                 </svg>
                 <h3 className="text-xl font-bold mb-2">{s.title}</h3>
-                <p className="mb-6 flex-grow text-[#43474e]">{s.desc}</p>
-                <WhatsAppButton href={`${WA_LINK}${s.link}`} className="text-base">
-                  Solicitar Orçamento
-                </WhatsAppButton>
-              </div>
+                <p className="mb-4 flex-grow text-[#43474e]">{s.desc}</p>
+                <span className="text-[#25D366] font-bold text-sm">Solicitar Orçamento via WhatsApp →</span>
+              </a>
             ))}
           </div>
         </div>
@@ -192,7 +190,7 @@ export default function Home() {
                 {n.name}<br/><span className="text-sm font-normal opacity-70">{n.time}</span>
               </div>
             ))}
-            <div className="p-4 border border-[#1a365d] bg-[#d6e3ff] rounded text-center font-bold text-[#1a365d]">Ver todos...</div>
+            <a href="/bairros" className="p-4 border border-[#1a365d] bg-[#d6e3ff] rounded text-center font-bold text-[#1a365d] hover:bg-[#c0d4f0] transition-colors">Ver todos...</a>
           </div>
         </div>
       </section>
@@ -245,15 +243,42 @@ export default function Home() {
             <WhatsAppButton href={WA_LINK} className="px-12 py-5 rounded-full text-lg">
               FALAR COM ATENDENTE AGORA
             </WhatsAppButton>
-            <p className="opacity-70">WhatsApp: +55 96 98432-1456 | Rua Exemplo, Santa Cândida, Curitiba - PR | Atendimento 24h / 7 dias</p>
+            <p className="opacity-70">WhatsApp: +55 41 99999-9999 | Rua Exemplo, Santa Cândida, Curitiba - PR | Atendimento 24h / 7 dias</p>
           </div>
         </div>
       </section>
 
-      <footer className="bg-[#1a365d] border-t border-white/10">
-        <div className="flex flex-col items-center py-10 px-4 text-center gap-4 text-white">
-          <p className="font-bold text-lg">DESENTUPIDORA CURITIBA</p>
-          <p className="opacity-80 max-w-md">© 2024 Desentupidora Curitiba Emergencial. Especialistas em desobstrução 24h.</p>
+      <footer className="bg-[#1a365d] border-t border-white/10 pb-8">
+        <div className="max-w-6xl mx-auto px-4 py-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
+            <div>
+              <p className="font-bold text-lg mb-2">DESENTUPIDORA CURITIBA</p>
+              <p className="opacity-80 text-sm">Especialistas em desentupimento 24h em Curitiba e região metropolitana.</p>
+            </div>
+            <div>
+              <p className="font-bold text-sm mb-3 uppercase opacity-80">Serviços</p>
+              <ul className="space-y-2 text-sm">
+                <li><a className="opacity-80 hover:opacity-100" href="/servicos/desentupidora-pia">Desentupidora de Pia</a></li>
+                <li><a className="opacity-80 hover:opacity-100" href="/servicos/desentupidora-vaso">Desentupidora de Vaso</a></li>
+                <li><a className="opacity-80 hover:opacity-100" href="/servicos/desentupidora-ralo">Desentupidora de Ralo</a></li>
+                <li><a className="opacity-80 hover:opacity-100" href="/servicos/desentupidora-esgoto">Desentupidora de Esgoto</a></li>
+                <li><a className="opacity-80 hover:opacity-100" href="/servicos/hidrojateamento">Hidrojateamento</a></li>
+                <li><a className="opacity-80 hover:opacity-100" href="/servicos/caca-vazamentos">Caça Vazamentos</a></li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-bold text-sm mb-3 uppercase opacity-80">Navegação</p>
+              <ul className="space-y-2 text-sm">
+                <li><a className="opacity-80 hover:opacity-100" href="/">Início</a></li>
+                <li><a className="opacity-80 hover:opacity-100" href="/bairros">Bairros</a></li>
+                <li><a className="opacity-80 hover:opacity-100" href="/faq">Dúvidas Frequentes</a></li>
+                <li><a className="opacity-80 hover:opacity-100" href="/contato">Contato</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-white/10 mt-8 pt-6 text-center">
+            <p className="text-sm opacity-60">© 2026 Desentupidora Curitiba 24h — Atendimento em todos os bairros</p>
+          </div>
         </div>
       </footer>
 
