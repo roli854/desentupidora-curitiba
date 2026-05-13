@@ -5,7 +5,7 @@ import Footer from '../../components/Footer'
 
 export const metadata: Metadata = { title: 'Desentupidora de Esgoto em Curitiba | Atendimento 24h', description: 'Desentupimento completo de rede de esgoto em Curitiba. Diagnóstico profissional. Orçamento gratuito!' }
 
-const PHONE = '+5541999999999'
+const PHONE = '5541999999999'
 const WA_LINK = `https://wa.me/${PHONE}?text=Ola%2C%20preciso%20desentupir%20esgoto`
 
 const trustBadges = [

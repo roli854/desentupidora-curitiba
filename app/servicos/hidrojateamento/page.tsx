@@ -5,7 +5,7 @@ import Footer from '../../components/Footer'
 
 export const metadata: Metadata = { title: 'Hidrojateamento em Curitiba | Limpeza de Tubulações', description: 'Hidrojateamento profissional em Curitiba. Limpeza de tubulações com jato de água de alta pressão. Orçamento gratuito!' }
 
-const PHONE = '+5596984321456'
+const PHONE = '5541999999999'
 const WA_LINK = `https://wa.me/${PHONE}?text=Ola%2C%20preciso%20de%20hidrojateamento`
 
 const trustBadges = [

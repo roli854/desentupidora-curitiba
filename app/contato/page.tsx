@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 
 export const metadata: Metadata = { title: 'Fale Conosco - Desentupidora Curitiba | 24h via WhatsApp', description: 'Entre em contato com a melhor desentupidora de Curitiba. Atendemos 24 horas. Tire dúvidas, solicite orçamento!' }
 
-const PHONE = '+5541999999999'
+const PHONE = '5541999999999'
 const WA_LINK = `https://wa.me/${PHONE}?text=Ola%2C%20quero%20falar%20com%20atendente`
 
 const trustBadges = [

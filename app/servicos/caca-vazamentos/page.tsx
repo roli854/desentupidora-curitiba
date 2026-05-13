@@ -5,7 +5,7 @@ import Footer from '../../components/Footer'
 
 export const metadata: Metadata = { title: 'Caça Vazamentos em Curitiba | Detecção sem Quebrar', description: 'Detecção de vazamentos em tubulações ocultas sem quebrar paredes. Tecnologia moderna. Orçamento gratuito!' }
 
-const PHONE = '+5541999999999'
+const PHONE = '5541999999999'
 const WA_LINK = `https://wa.me/${PHONE}?text=Ola%2C%20preciso%20localizar%20um%20vazamento`
 
 const trustBadges = [
