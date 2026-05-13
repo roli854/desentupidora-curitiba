@@ -56,10 +56,6 @@ export default function Page() {
       </section>
 
       <Footer />
-      <div className="fixed bottom-0 left-0 right-0 bg-[#25D366] text-white py-4 px-4 flex items-center justify-between shadow-lg z-50">
-        <span className="font-bold">Precisa de desentupimento agora?</span>
-        <WhatsAppButton href={WA_LINK} className="bg-white text-[#25D366] px-6 py-2 rounded-full font-bold hover:bg-gray-100">Solicitar Orçamento via WhatsApp</WhatsAppButton>
-      </div>
     </main>
   )
 }
