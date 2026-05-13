@@ -20,10 +20,11 @@ export default function DesentupidoraPia() {
       </section>
 
       <section className="py-12 px-4 bg-white">
-        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center p-4"><div className="text-2xl font-bold text-green-600">24h</div><div className="text-gray-600">Atendimento</div></div>
           <div className="text-center p-4"><div className="text-2xl font-bold text-green-600">30min</div><div className="text-gray-600">Chegamos</div></div>
           <div className="text-center p-4"><div className="text-2xl font-bold text-green-600">30min</div><div className="text-gray-600">Resolvemos</div></div>
+          <div className="text-center p-4"><div className="text-2xl font-bold text-green-600">PIX</div><div className="text-gray-600">Aceitamos</div></div>
         </div>
       </section>
 

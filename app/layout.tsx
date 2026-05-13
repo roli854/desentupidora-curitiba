@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import StickyFooter from './components/StickyFooter'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://desentupidoracuritiba365.com.br'),
@@ -81,7 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">{children}<StickyFooter /></body>
     </html>
   )
 }

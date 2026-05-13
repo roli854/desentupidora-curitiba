@@ -29,7 +29,7 @@ export default function Hidrojateamento() {
 
       <section className="py-12 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center p-4">
               <div className="text-2xl font-bold text-green-600">24h</div>
               <div className="text-gray-600">Atendimento</div>
@@ -41,6 +41,10 @@ export default function Hidrojateamento() {
             <div className="text-center p-4">
               <div className="text-2xl font-bold text-green-600">500+</div>
               <div className="text-gray-600">Clientes</div>
+            </div>
+            <div className="text-center p-4">
+              <div className="text-2xl font-bold text-green-600">PIX</div>
+              <div className="text-gray-600">Aceitamos</div>
             </div>
           </div>
         </div>

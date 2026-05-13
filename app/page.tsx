@@ -47,9 +47,9 @@ const neighborhoods = [
 ]
 
 const testimonials = [
-  { text: '"Tinha vaso entupido na sexta à noite, achei que teria que esperar segunda. Liguei, chegou em 25 minutos, resolveu tudo em 15 minutos. Preço justo, recomendo!"', author: '— Maria S., Curitiba (Santa Cândida)' },
-  { text: '"Desentupiu minha pia da cozinha que estava completamente travada. Chegaram rapidinho, trabalho limpo, nada de sujeira. Agora sei quem chamar!"', author: '— Carlos M., Bacacheri' },
-  { text: '"Problema no ralo do banheiro que estava causando mau cheiro há semanas. Resolveu de primeira, técnico muito atencioso. Recomendo demais!"', author: '— Ana Paula R., Tingui' },
+  { text: '"Tinha vaso entupido na sexta à noite, achei que teria que esperar segunda. Liguei, chegou em 25 minutos, resolveu tudo em 15 minutos. Preço justo, recomendo!"', author: '— Maria S., Santa Cândida', service: 'Desentupidora de Vaso', time: 'Chegamos em 25min' },
+  { text: '"Desentupiu minha pia da cozinha que estava completamente travada. Chegaram rapidinho, trabalho limpo, nada de sujeira. Agora sei quem chamar!"', author: '— Carlos M., Bacacheri', service: 'Desentupidora de Pia', time: 'Chegamos em 20min' },
+  { text: '"Problema no ralo do banheiro que estava causando mau cheiro há semanas. Resolveu de primeira, técnico muito atencioso. Recomendo demais!"', author: '— Ana Paula R., Tingui', service: 'Desentupidora de Ralo', time: 'Chegamos em 30min' },
 ]
 
 const faqs = [
@@ -208,8 +208,12 @@ export default function Home() {
                     <svg key={star} className="w-5 h-5 text-[#f59e0b]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                   ))}
                 </div>
-                <p className="mb-6">{t.text}</p>
-                <p className="font-bold">{t.author}</p>
+                <p className="mb-4">{t.text}</p>
+                <div className="border-t border-gray-200 pt-4">
+                  <p className="font-bold">{t.author}</p>
+                  <p className="text-sm text-green-600 font-medium">{t.service}</p>
+                  <p className="text-sm text-gray-500">{t.time}</p>
+                </div>
               </div>
             ))}
           </div>
